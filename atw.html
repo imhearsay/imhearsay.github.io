@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<title>Around the World w/DeLorean2399</title>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+h2,
+h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
+}
+
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 20px;
+  font-family: Montserrat, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  top: 0;
+  height: 135px;
+  margin-top: 20px;
+  width: 270px;
+}
+
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDSX5278LJ');
+</script>	
+	
+	
+</head>
+
+<body>
+
+<div id="map"></div>
+<div class="map-overlay" id="features">
+<h2></h2>
+<div id="pd"><p><strong>Total Flights:</strong> 130 <br>
+<strong>Total Flight Time:</strong> 147.20 hrs <br>
+<strong>Total Distance:</strong> 48,646 nm <br>
+<strong>Average Flight Time:</strong> 1.13 hrs <br>
+<strong>Average Distance:</strong> 374 nm <br>
+<strong>Current Location:</strong> SAVC <br><br>
+</p></div>
+</div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaW1oZWFyc2F5IiwiYSI6ImNrcGhodXZ4ODBoN3gyb2prMGY2OWYyMGgifQ.aZwuj2S13paIiQdMq-1S3A';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/imhearsay/ckpl7yawe0nqf17miu2vrzg1z',
+    center: [11.467670, 26.606120],
+    zoom: 1.85
+  });
+</script>
+
+
+</body>
+</html>

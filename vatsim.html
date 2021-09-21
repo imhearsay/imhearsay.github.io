@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<title>VATSIM and Virtual Airline Flights</title>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+h2,
+h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
+}
+
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 20px;
+  font-family: Montserrat, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  top: 0;
+  height: 227px;
+  margin-top: 20px;
+  width: 270px;
+}
+
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDSX5278LJ');
+</script>	
+	
+	
+</head>
+
+<body>
+
+<div id="map"></div>
+<div class="map-overlay" id="features">
+<h2></h2>
+<div id="pd"><p><strong>Total Flights:</strong> 111 <br>
+<strong>Total Flight Time:</strong> 1,039 hrs <br>
+<strong>Total Distance:</strong> 409,942 nm <br>
+<strong>Average Flight Time:</strong> 8.42 hrs <br>
+<strong>Average Distance:</strong> 3,761 nm <br>
+<strong>A20N</strong> 414 hrs <br>
+<strong>A35K</strong> 431 hrs <br>
+<strong>B39M</strong> 31 hrs <br>
+<strong>B77W</strong> 41 hrs <br>
+<strong>Qatar Airways</strong> 723 hrs <br>
+<strong>American Airlines</strong> 15 hrs <br>
+<strong>Current Location:</strong> OTHH <br><br>
+</p></div>
+</div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaW1oZWFyc2F5IiwiYSI6ImNrdHRubWRnbzFpYzUydW8xNW5zcWR5YnIifQ.9ulrB8oOwnJb-04uHNRjjw';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/imhearsay/cksb86ve51smm17qut5o6xtkz',
+    center: [-2.561422, 11.142729],
+    zoom: 1.96
+  });
+</script>
+
+
+</body>
+</html>

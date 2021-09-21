@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<title>imhearsay | flight sim</title>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin: auto; padding: 250px; }
+#map { top: 0; bottom: 0; width: 100%; }
+
+h2,
+h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 2vw;
+  margin: auto;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+
+}
+
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+.map-overlay {
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin: auto;
+  font-family: Montserrat, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+
+
+}
+
+#features {
+  top: 150px;
+  height: center;
+  margin-top: 200px;
+  width: 30%;
+
+}
+
+#inner {
+  display: table;
+  margin: 0 auto;
+  border: 0px solid black;
+}
+
+#outer {
+  border: 0px solid red;
+  width:100%
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #358df2;
+}
+
+a:active {
+  color: #358df2;
+}
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDSX5278LJ');
+</script>	
+	
+	
+</head>
+
+<body>
+
+
+
+<div id="outer">
+  <div id="inner"><p><a href="https://imhearsay.github.io/vatsim.html" target="_blank">VATSIM & VA Flights</a> | <a href="https://imhearsay.github.io/atw.html" target="_blank">Around the World</a> </p></div>
+
+</div>
+
+</body>
+</html>
