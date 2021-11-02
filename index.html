@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
   <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-	<title>imhearsay | flight sim</title>
+	<title>oneworld tour | joinava.org</title>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 <style>
-body { margin: auto; padding: 250px; }
-#map { top: 0; bottom: 0; width: 100%; }
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
 h2,
 h3 {
@@ -21,11 +21,9 @@ h3 {
 }
 
 p {
-  font-size: 2vw;
-  margin: auto;
-  text-align: center;
-  font-family: Montserrat, sans-serif;
-
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
 }
 
 /**
@@ -33,53 +31,23 @@ p {
 * (information box and legend) will be displayed
 * on the page. */
 .map-overlay {
+  position: absolute;
   bottom: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.8);
-  margin: auto;
+  margin-right: 20px;
   font-family: Montserrat, sans-serif;
   overflow: auto;
   border-radius: 3px;
-
-
 }
 
 #features {
-  top: 150px;
-  height: center;
-  margin-top: 200px;
-  width: 30%;
-
+  top: 0;
+  height: 135px;
+  margin-top: 20px;
+  width: 270px;
 }
 
-#inner {
-  display: table;
-  margin: 0 auto;
-  border: 0px solid black;
-}
-
-#outer {
-  border: 0px solid red;
-  width:100%
-}
-
-a:link {
-  text-decoration: none;
-  color: black;
-}
-
-a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: #358df2;
-}
-
-a:active {
-  color: #358df2;
-}
 
 </style>
 
@@ -98,13 +66,28 @@ a:active {
 
 <body>
 
-
-
-
-<div id="outer">
-  <div id="inner"><p><a href="https://imhearsay.github.io/vatsim.html" target="_blank">VATSIM & VA Flights</a> | <a href="https://imhearsay.github.io/atw.html" target="_blank">Around the World</a> </p></div>
-
+<div id="map"></div>
+<div class="map-overlay" id="features">
+<h2></h2>
+<div id="pd"><p><strong>Total Flights:</strong> 170 <br>
+<strong>Total Flight Time:</strong> 212.52 hrs <br>
+<strong>Total Distance:</strong> 66,559 nm <br>
+<strong>Average Flight Time:</strong> 1.25 hrs <br>
+<strong>Average Distance:</strong> 392 nm <br>
+<strong>Current Location:</strong> MUHA <br><br>
+</p></div>
 </div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaW1oZWFyc2F5IiwiYSI6ImNrcGhodXZ4ODBoN3gyb2prMGY2OWYyMGgifQ.aZwuj2S13paIiQdMq-1S3A';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/imhearsay/ckpl7yawe0nqf17miu2vrzg1z',
+    center: [-40.273, 35.5640],
+    zoom: 2
+  });
+</script>
+
 
 </body>
 </html>
