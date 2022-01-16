@@ -1,1 +1,1 @@
-In 2020, I decided I needed a hobby that I could participate in from home. I ended up finding the world of flight sim and have immersed into it. After about three months I started to lose interest but then found an online community of flight simmers at twitch.tv. 
+join us on<a href="https://twitch.tv/delorean2399>">DeLorean2399's twitch channel</a>. 
