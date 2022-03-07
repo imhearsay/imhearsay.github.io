@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
   <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-	<title>IVAO Tours | Long Hauls and Qatar Airways</title>
+  <title>IVAO Tours | Long Hauls and Qatar Airways</title>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 <style>
@@ -43,7 +43,7 @@ p {
 
 #features {
   top: 0;
-  height: 75px;
+  height: 100px;
   margin-top: 20px;
   width: 270px;
 }
@@ -69,9 +69,23 @@ a:hover, a:active {
   gtag('js', new Date());
 
   gtag('config', 'G-DDSX5278LJ');
-</script>	
-	
-	
+</script> 
+
+<script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+var x1=x.toISOString();// changing the display to UTC string
+document.getElementById('ct').innerHTML = x1;
+tt=display_c();
+ }
+</script>
+  
+  
 </head>
 
 <body>
@@ -82,7 +96,10 @@ a:hover, a:active {
 <div id="pd"><p>
 <strong>IVAO Tours</strong>  <br>
 Long Haul 2022 <br>
-Qatar Airways 2022 <br>
+Qatar Airways 2022 <br> <br>
+<body onload=display_ct();>
+<span id='ct' ></span>
+
 <!--<strong>Flights by Month:</strong><a rel="noopener" target="_blank" href="fbm.png"> link to graph</a><br>-->
 
 </p></div>
