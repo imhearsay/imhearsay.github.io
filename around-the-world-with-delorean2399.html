@@ -1,0 +1,106 @@
+@@ -0,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<title>Around the World w/DeLorean2399</title>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin: 0; padding: 0; color: aliceblue;}
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+h2,
+h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
+}
+
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(63, 63, 63, 0.8);
+  margin-right: 20px;
+  font-family: Montserrat, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  top: 0;
+  height: 175px;
+  margin-top: 20px;
+  width: 270px;
+}
+a:link, a:visited {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+
+}
+
+a:hover, a:active {
+  color: rgb(44, 143, 255);
+}
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDSX5278LJ');
+</script>	
+	
+	
+</head>
+
+<body>
+
+<div id="map"></div>
+<div class="map-overlay" id="features">
+<h2></h2>
+<div id="pd"><p>Total Flights: 250 <br>
+Total Flight Time: 325.72 hrs <br>
+Total Distance: 97,577 nm <br>
+Average Flight Time: 1.30 hrs <br>
+Average Distance: 390 nm <br>
+Start Date: 4.12.21 <br>
+End Date: 2.21.22
+<hr style="width: 75%;">
+<p style="text-align: center;"><a href="https://imhearsay.com">imhearsay.com</a>
+</p></div>
+</div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaW1oZWFyc2F5IiwiYSI6ImNrcGhodXZ4ODBoN3gyb2prMGY2OWYyMGgifQ.aZwuj2S13paIiQdMq-1S3A';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/imhearsay/ckpl7yawe0nqf17miu2vrzg1z',
+    center: [11.467670, 26.606120],
+    zoom: 1.85
+  });
+</script>
+
+
+</body>
+</html>
