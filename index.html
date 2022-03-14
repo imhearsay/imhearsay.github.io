@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
   <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-  <title>imhearsay | Journal | Virtual Aviation and Flight Simulation</title>
-  <meta name="description" content="an online journal to write about and track my flight simulation and virtual aviation journey.">
-  <meta name="keywords" content="aviation journal, virtual aviation journal, flight simulation journal, ivao world tour">
-
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
-<script src="https://kit.fontawesome.com/205a300424.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/205a300424.js" crossorigin="anonymous"></script>
+	<title>imhearsay | Journal | Virtual Aviation and Flight Simulation</title>
 <style>
-body { margin: 0px; padding: 0; color: white}
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+body { 
+  margin: auto; 
+  padding: 150px; 
+  padding-top: 50px; 
+  padding-bottom: 5px; 
+  color: white; 
+  background-color: rgb(37, 37, 37);
+  font-family: Montserrat, sans-serif;
+}
+
+#map { top: 0; bottom: 0; width: 100%; }
+
+h1 {
+  margin: 10px;
+  font-size: 2.2em;
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+
+ul,
+li {
+  font-size: 1em;
+  margin: auto;
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
 
 h2,
 h3 {
   margin: 10px;
   font-size: 1.2em;
+  color: white;
 }
 
 h3 {
@@ -25,48 +46,147 @@ h3 {
 }
 
 p {
-  font-size: 0.85em;
-  margin: 10px;
-  text-align: left;
+  font-size: 2vw;
+  margin: auto;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
   color: white;
+
 }
 
 /**
 * Set rules for how the map overlays
 * (information box and legend) will be displayed
 * on the page. */
+
+strong {
+  color:rgb(0, 183, 255)
+}
+
 .map-overlay {
-  position: absolute;
   bottom: 0;
   right: 0;
-  background: rgba(54, 54, 54, 0.8);
-  margin-right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  margin: auto;
   font-family: Montserrat, sans-serif;
   overflow: auto;
   border-radius: 3px;
+
+
 }
 
 #features {
-  top: 0;
-  height: 350px;
-  margin-top: 20px;
-  width: 270px;
+  top: 150px;
+  height: center;
+  margin-top: 200px;
+  width: 30%;
+
 }
 
-a:link, a:visited {
-  color: rgb(255, 255, 255);
-  text-align: center;
+#inner {
+  display: table;
+  margin: 0 auto;
+  border: 0px solid black;
+}
+
+#outer {
+  border: 0px solid red;
+  width:100%
+}
+
+a:link {
   text-decoration: none;
-
+  color: black;
 }
 
-a:hover, a:active {
+a:visited {
+  text-decoration: none;
+  color: #ffffff !important;
+}
+
+a:hover {
+  color: rgb(0, 183, 255) !important;
+}
+
+a:active {
+  color: rgb(0, 183, 255) !important;
+}
+
+.footer {
+  background-color:rgb(37, 37, 37);
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+  text-align: left;
+}
+.footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+
+.footer a:visited {
+  text-decoration: none;
+  color: #737373 !important;
+}
+.footer a:hover {
+  color: rgb(0, 183, 255) !important;
+}
+
+.footer a:active {
   color: rgb(0, 183, 255);
 }
+
+.fa-regular,
+.fa-solid {
+  color: #737373;
+}
+
 .fa-brands:hover,
 .fa-regular:hover,
 .fa-solid:hover {
     color: rgb(0, 183, 255) !important;
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgb(37, 37, 37);
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 1em; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.header a:hover {
+  background-color:rgb(71, 71, 71);
+  color: black;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+
 }
 
 </style>
@@ -79,68 +199,67 @@ a:hover, a:active {
   gtag('js', new Date());
 
   gtag('config', 'G-DDSX5278LJ');
-</script> 
+</script>	
 
 <script type="text/javascript"> 
-function display_c(){
-var refresh=1000; // Refresh rate in milli seconds
-mytime=setTimeout('display_ct()',refresh)
-}
-
-function display_ct() {
-var x = new Date()
-var x1=x.toISOString();// changing the display to UTC string
-document.getElementById('ct').innerHTML = x1;
-tt=display_c();
- }
-</script>
+  function display_c(){
+  var refresh=1000; // Refresh rate in milli seconds
+  mytime=setTimeout('display_ct()',refresh)
+  }
   
-  
+  function display_ct() {
+  var x = new Date()
+  var x1=x.toISOString();// changing the display to UTC string
+  document.getElementById('ct').innerHTML = x1;
+  tt=display_c();
+   }
+  </script>
+	
 </head>
 
 <body>
 
-<div id="map"></div>
-<div class="map-overlay" id="features">
-<h2></h2>
-<div id="pd"><p>
-VATSIM Hours: 1262:51:34 <br>
-IVAO Hours: 79:56 <br></p>
-<hr style="width:70%">
-<p><strong>IVAO Tours</strong> (in progress)  <br>
-<a href="posts/ivao-long-haul-worldtour-2022.html">Long Haul 2022</a> <font color="#47ceff">----------</font> <br>
-<a href="posts/qatar-airways-tour-2022.html">Qatar Airways 2022</a> <font color="#d9f3fd">----------</font> <br> 
-<p><strong>Virtual Airlines</strong><br>
-  DeLorean Airlines <br>
-<a href="american-virtual-airlines.html">American Virtual Airlines</a><br>
-Sky Colombia<br>
-<p><strong>Completed Tours</strong><br>
-<a href="around-the-world-with-delorean2399.html">Around the World w/DeLorean2399</a><br><hr style="width:70%">
-<p><a href="posts/about-me.html">About Me</a></p><hr style="width:70%">
-<p style="text-align:center;"><body onload=display_ct();>
-<span id='ct' ></span></p>
-<p style="text-align: center;">
-  <a href="photos.html"><i class="fa-regular fa-image fa-lg" style="color:#737373"></i></a>&nbsp;&nbsp;
-  <a href="https://twitch.tv/imhearsay"><i class="fa-brands fa-twitch fa-lg" style="color:#737373"></i></a>&nbsp;&nbsp;
-  <a href="https://streamelements.com/imhearsay/tip"><i class="fa-brands fa-paypal fa-lg" style="color:#737373"></i></a>&nbsp;&nbsp;
-  <a href="https://commerce.coinbase.com/checkout/d1f7ca23-3f50-463e-853f-0c656365d323"><i class="fa-solid fa-bitcoin-sign fa-lg" style="color:#737373"></i></a>&nbsp;&nbsp;
-  <a href="mailto:imhearsay@gmail.com"><i class="fa-regular fa-envelope fa-lg" style="color:#737373"></i></a></p>
+  <div class="header">
+    <div class="header-right">
+      <a href="https://imhearsay.com/photos.html">Photos</a>
+      <a href="https://imhearsay.com/posts/about-me-and-system-specs.html">About</a>
+      
+    </div>
+  </div>
 
-<!--<strong>Flights by Month:</strong><a rel="noopener" target="_blank" href="fbm.png"> link to graph</a><br>-->
+<div id="outer">
+<strong>Logbook</strong><br><br>IVAO: 122:42<br>VATSIM: 1262:51<br><br>
 
-</p></div>
+<strong>Tours</strong><br><br>
+Long Haul World Tour 2022 (IVAO): <a href="maps/ivao-long-haul-world-tour-2022-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/ivao-long-haul-worldtour-2022-logbook.html"><i class="fa-solid fa-book"></i></a><br>
+Qatar Airways 2022 (IVAO/XG): <a href="maps/qatar-airways-tour-2022-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/ivao-qatar-airways-tour-2022-logbook.html"><i class="fa-solid fa-book"></i></a><br><br>
+
+<strong>Virtual Airlines</strong><br><br>
+DeLorean Airlines<!-- : <i class="fa-regular fa-map"></i>&nbsp;&nbsp;<a href="logbook/delorean-airlines-logbook.html"><i class="fa-solid fa-book"></i></a>--><br>
+American Virtual Airlines: <a href="maps/american-virtual-airlines-map.html"><i class="fa-regular fa-map"></i></a><!--&nbsp;&nbsp;<a href="logbook/american-virtual-airlines-logbook.html"><i class="fa-solid fa-book"></i></a>--><br>
+Sky Colombia<!--: <i class="fa-regular fa-map"></i>&nbsp;&nbsp;<a href="logbook/sky-colombia-logbook.html"><i class="fa-solid fa-book"></i></a>--><br><br>
+
+<strong>Archive</strong><br><br>
+Around the World w/DeLorean2399: <a href="maps/around-the-world-with-delorean2399-map.html"><i class="fa-regular fa-map"></i></a><!--&nbsp;&nbsp;<a href="logbook/delorean-airlines-logbook.html"><i class="fa-solid fa-book"></i></a>--><br>
+
+
+ 
+<!-- <div id="inner"><p><a href="https://imhearsay.github.io/vatsim.html" target="_blank">VATSIM & VA Flights</a> | <a href="https://imhearsay.github.io/atw.html" target="_blank">Around the World</a> </p></div> -->
+
 </div>
 
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiaW1oZWFyc2F5IiwiYSI6ImNrcGhodXZ4ODBoN3gyb2prMGY2OWYyMGgifQ.aZwuj2S13paIiQdMq-1S3A';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/imhearsay/cl0eqgj20000j14pfu0z5m9l6',
-    center: [4.160, 12.419],
-    zoom: 2
-  });
-</script>
+<!--Section 7: Footer-->
 
+<div class="footer">
+  <hr>
+  <footer>  
+    &copy; 2022 <a href="https://imhearsay.com">imhearsay</a>
+
+<span style="float: right;"><body onload=display_ct();>
+      <span id='ct' ></span>
+      <br>
+    </footer>  
+</div>
 
 </body>
 </html>
