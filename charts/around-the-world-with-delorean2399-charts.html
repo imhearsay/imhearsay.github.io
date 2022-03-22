@@ -7,7 +7,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>Qatar Airways Long-Haul Tour: Hours by Date</title>
+  <title>Around the World w/DeLorean2399: Hours by Date</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
@@ -112,20 +112,18 @@ a:active {
     let massPopChart = new Chart(myChart, {
       type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        labels:['3.2.22', '3.6.22', '3.10.22', '3.18.22', '3.19.22', '3.20.22', '3.21.22'],
+        labels:['Apr','May','June','July','Aug','Sep','Oct','Nov','Dec','Jan','Feb'],
         datasets:[{
           label:'hours',
           data:[
-            3,
-            2.5,
-            10,
-            10.5,
-            8,
-            10.2,
-            8
+            42.93,53.70,21.70,38.55,27.45,13.70,17.25,25.30,23.92,32.28,28.93
           ],
           //backgroundColor:'green',
           backgroundColor:[
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
             'rgb(3,173,252)',
             'rgb(3,173,252)',
             'rgb(3,173,252)',
@@ -144,7 +142,7 @@ a:active {
       options:{
         title:{
           display:true,
-          text:['Qatar Airways Long-Haul Tour: Hours by Date'],
+          text:['Around the World w/DeLorean2399 (2021-22): Hours by Date'],
           fontSize:25
         },
 

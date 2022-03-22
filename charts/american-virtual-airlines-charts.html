@@ -7,7 +7,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>Qatar Airways Long-Haul Tour: Hours by Date</title>
+  <title>American Virtual Airlines: Hours by Date</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
@@ -112,17 +112,11 @@ a:active {
     let massPopChart = new Chart(myChart, {
       type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        labels:['3.2.22', '3.6.22', '3.10.22', '3.18.22', '3.19.22', '3.20.22', '3.21.22'],
+        labels:['7/21','8/21','9/21','2/22','3/22',],
         datasets:[{
           label:'hours',
           data:[
-            3,
-            2.5,
-            10,
-            10.5,
-            8,
-            10.2,
-            8
+            288.28,383.68,263.82,51.52,17.73
           ],
           //backgroundColor:'green',
           backgroundColor:[
@@ -144,7 +138,7 @@ a:active {
       options:{
         title:{
           display:true,
-          text:['Qatar Airways Long-Haul Tour: Hours by Date'],
+          text:['American Virtual Airlines: Hours by Date'],
           fontSize:25
         },
 
