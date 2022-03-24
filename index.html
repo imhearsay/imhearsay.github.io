@@ -207,7 +207,7 @@ a:active {
   gtag('config', 'G-DDSX5278LJ');
 </script>	
 
-<script type="text/javascript"> 
+<script type="text/javascript">
   function display_c(){
   var refresh=1000; // Refresh rate in milli seconds
   mytime=setTimeout('display_ct()',refresh)
@@ -215,11 +215,11 @@ a:active {
   
   function display_ct() {
   var x = new Date()
-  var x1=x.toISOString();// changing the display to UTC string
+  var x1=x.toISOString().slice(11, 19) + ' Z'
   document.getElementById('ct').innerHTML = x1;
   tt=display_c();
    }
-  </script>
+</script>
 	
 </head>
 
@@ -234,23 +234,22 @@ a:active {
   </div>
 
 <div id="outer">
-<strong>Logbook</strong><br><br>IVAO: 212:04<br>VATSIM: 1262:51<br><br>
+<strong>Logbook</strong><br><br>IVAO: 238:21<br>VATSIM: 1262:51<br><br>
 
 
 <strong>Tours</strong><br><br>
-<i>in process</i><br>
-Qatar Airways 2022 (IVAO/XG): <a href="maps/qatar-airways-tour-2022-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/ivao-qatar-airways-tour-2022-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/qatar-charts.html"><i class="fa-solid fa-chart-column"></i></a><br><br>
+<i>in progress</i><br>
+VFR World Tour 2022 (IVAO): <a href="maps/ivao-vfr-world-tour-2022-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/ivao-VFR-world-tour-2022-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/vfr-world-tour-ivao-charts.html"><i class="fa-solid fa-chart-column"></i></a><br><br>
 
 <i>completed</i><br>
-Long Haul World Tour 2022 (IVAO): <a href="maps/ivao-long-haul-world-tour-2022-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/ivao-long-haul-worldtour-2022-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/long-haul-world-tour-ivao-charts.html"><i class="fa-solid fa-chart-column"></i></a><br>
+Qatar Airways 2022 (IVAO/XG): <a href="maps/qatar-airways-tour-2022-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/ivao-qatar-airways-tour-2022-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/qatar-charts.html"><i class="fa-solid fa-chart-column"></i></a><br>
+Long Haul World Tour 2022 (IVAO): <a href="maps/ivao-long-haul-world-tour-2022-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/ivao-long-haul-world-tour-2022-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/long-haul-world-tour-ivao-charts.html"><i class="fa-solid fa-chart-column"></i></a><br>
 Around the World w/<a href="https://twitch.tv/delorean2399">DeLorean2399</a>: <a href="maps/around-the-world-with-delorean2399-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/around-the-world-with-delorean2399-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/around-the-world-with-delorean2399-charts.html"><i class="fa-solid fa-chart-column"></i></a><br><br>
 
 <strong>Virtual Airlines</strong><br><br>
 American Virtual Airlines: <a href="maps/american-virtual-airlines-map.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/american-virtual-airlines-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/american-virtual-airlines-charts.html"><i class="fa-solid fa-chart-column"></i></a><br>
 Sky Colombia: <a href="maps/sky-colombia-virtual-airline.html"><i class="fa-regular fa-map"></i></a>&nbsp;&nbsp;<a href="logbook/sky-colombia-logbook.html"><i class="fa-solid fa-book"></i></a>&nbsp;&nbsp;<a href="charts/sky-colombia-charts.html"><i class="fa-solid fa-chart-column"></i></a><br><br>
  
-<!-- <div id="inner"><p><a href="https://imhearsay.github.io/vatsim.html" target="_blank">VATSIM & VA Flights</a> | <a href="https://imhearsay.github.io/atw.html" target="_blank">Around the World</a> </p></div> -->
-
 </div>
 
 <!--Section 7: Footer-->

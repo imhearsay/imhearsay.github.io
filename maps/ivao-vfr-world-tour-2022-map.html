@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+  <title>imhearsay | Journal | Virtual Aviation and Flight Simulation</title>
+  <meta name="description" content="an online journal to write about and track my flight simulation and virtual aviation journey.">
+  <meta name="keywords" content="aviation journal, virtual aviation journal, flight simulation journal, ivao world tour">
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<script src="https://kit.fontawesome.com/205a300424.js" crossorigin="anonymous"></script>
+<style>
+body { margin: 0px; padding: 0; color: white}
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+h2,
+h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 10px;
+  text-align: left;
+  color: white;
+}
+
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(54, 54, 54, 0.8);
+  margin-right: 20px;
+  font-family: Montserrat, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  top: 0;
+  height: 50px;
+  margin-top: 20px;
+  width: 120px;
+}
+
+a:link, a:visited {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+
+}
+
+a:hover, a:active {
+  color: rgb(0, 183, 255);
+}
+.fa-brands:hover,
+.fa-regular:hover,
+.fa-solid:hover {
+    color: rgb(0, 183, 255) !important;
+}
+
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDSX5278LJ');
+</script> 
+
+<script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+var x1=x.toISOString();// changing the display to UTC string
+document.getElementById('ct').innerHTML = x1;
+tt=display_c();
+ }
+</script>
+  
+  
+</head>
+
+<body>
+
+<div id="map"></div>
+<div class="map-overlay" id="features">
+<h2></h2>
+<div id="pd">
+  <p style="text-align: center;"><a href="https://imhearsay.com"><i class="fa-solid fa-house"></i></a>&nbsp;&nbsp;
+    <a href="/logbook/ivao-VFR-world-tour-2022-logbook.html"><i class="fa-solid fa-book"></i></a>
+  </p>
+
+<!--<strong>Flights by Month:</strong><a rel="noopener" target="_blank" href="fbm.png"> link to graph</a><br>-->
+
+</p></div>
+</div>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaW1oZWFyc2F5IiwiYSI6ImNrcGhodXZ4ODBoN3gyb2prMGY2OWYyMGgifQ.aZwuj2S13paIiQdMq-1S3A';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/imhearsay/cl14djey8001w15obo4lgpdpr',
+    center: [4.160, 12.419],
+    zoom: 2
+  });
+</script>
+
+
+</body>
+</html>
