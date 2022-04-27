@@ -227,6 +227,72 @@ a:active {
     });
   </script>
 
+
+<br><br> <br>
+
+<canvas id="myChart3" style="position: relative; height:34vh; width:40vw"></canvas>
+
+<script>
+  let myChart3 = document.getElementById('myChart3').getContext('2d');
+
+  // Global Options
+  Chart.defaults.global.defaultFontFamily = 'Lato';
+  Chart.defaults.global.defaultFontSize = 18;
+  Chart.defaults.global.defaultFontColor = '#fff';
+
+  let massPopChart3 = new Chart(myChart3, {
+    type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+    data:{
+      labels:['P3D','MSFS','X-Plane'],
+      datasets:[{
+        label:'hours',
+        data:[
+          585,2201,7
+        ],
+        //backgroundColor:'green',
+        backgroundColor:[
+          'rgb(3,173,252)',
+          'rgb(3,173,252)',
+          'rgb(3,173,252)',
+          'rgb(3,173,252)',
+          'rgb(3,173,252)',
+          'rgb(3,173,252)',
+          'rgb(3,173,252)'
+        ],
+        borderWidth:1,
+        color: '#fff',
+        borderColor: '#fff',
+        hoverBorderWidth:3,
+        hoverBorderColor:'#000'
+      }]
+    },
+    options:{
+      title:{
+        display:true,
+        text:['Hours by Platform'],
+        fontSize:25
+      },
+
+      legend:{
+        display:false,
+        position:'right',
+        labels:{
+          fontColor:'#000'
+        }
+      },
+      layout:{padding:{left:20,right:20,bottom:20,top:20}},
+      
+      tooltips:{enabled:true},
+     
+
+
+
+
+  
+    }
+  });
+</script>
+
   
 </body>
 </html>
