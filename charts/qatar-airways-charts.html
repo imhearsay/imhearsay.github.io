@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Qatar Airways: Hours by Date</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDSX5278LJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDSX5278LJ');
+</script>	
+</head>
+
+<style>
+body {
+  background-color: rgb(37, 37, 37);
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgb(37, 37, 37);
+  padding: 20px 10px;
+}
+
+.header a {
+  float: right;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 1em; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+a:visited {
+  text-decoration: none;
+  color: #ffffff !important;
+}
+
+a:hover {
+  color: rgb(0, 183, 255) !important;
+}
+
+a:active {
+  color: rgb(0, 183, 255) !important;
+}
+
+.header a:hover {
+  background-color:rgb(71, 71, 71);
+  color: black;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }}
+  
+  .header-right {
+    float: none;
+  }
+
+</style>
+
+<body>
+
+  <div class="header">
+    <div class="header-right">
+      <a href="https://imhearsay.com/posts/about-me-and-system-specs.html">About</a>
+      <a href="https://imhearsay.com/photos.html">Photos</a>
+      <a href="https://imhearsay.com/">Home</a>
+      
+      
+      
+    </div>
+  </div>
+
+    <canvas id="myChart" style="position: relative; height:34vh; width:40vw"></canvas>
+
+
+
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#fff';
+
+    let massPopChart = new Chart(myChart, {
+      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:['2022'],
+        datasets:[{
+          label:'hours',
+          data:[
+            6
+          ],
+          //backgroundColor:'green',
+          backgroundColor:[
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
+            'rgb(3,173,252)',
+            'rgb(3,173,252)'
+          ],
+          borderWidth:1,
+          color: '#fff',
+          borderColor: '#fff',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:['Qatar Airways: Hours by Date'],
+          fontSize:25
+        },
+
+        legend:{
+          display:false,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{padding:{left:20,right:20,bottom:20,top:20}},
+        
+        tooltips:{enabled:true},
+       
+
+
+
+
+    
+      }
+    });
+  </script>
+
+  
+</body>
+</html>
